@@ -7,7 +7,7 @@ def listCurDirfile():
         print f
     
 def list_files(path):
-    # returns a list of names (with extension, without full path) of all files in folder path    
+    # function list file names in folder path    
     for name in os.listdir(path):
         if os.path.isfile(os.path.join(path, name)):
             print name    
