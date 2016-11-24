@@ -1,4 +1,11 @@
+import requests
 import os
+
+def fetchLeadspediaAPI():
+	url = "API URI"
+	payload = "{}"
+	response = requests.request("GET", url, data=payload)
+	print(response.text)
 
 def listCurDirfile():
     #function considers current directory to list contents
@@ -12,5 +19,9 @@ def list_files(path):
         if os.path.isfile(os.path.join(path, name)):
             print name    
 
+print "\Getting API Contents:\n"
+fetchLeadspediaAPI()
+print "\List Current Directory Contents:\n"
 listCurDirfile()
+print "\List Specific Directory Contents:\n"
 list_files("enter_dir_name_here")
